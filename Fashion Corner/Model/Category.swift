@@ -16,14 +16,16 @@ struct Category {
     var imageUrl: String
     var isActive: Bool = true
     var timeStamp: CVTimeStamp
+    var order: Int
     
-    init(name: String, id: String, gender: String, imageUrl: String, isActive: Bool = true, timeStamp: CVTimeStamp) {
+    init(name: String, id: String, gender: String, imageUrl: String, isActive: Bool = true, timeStamp: CVTimeStamp, order: Int) {
         self.name = name
         self.id = id
         self.gender = gender
         self.imageUrl = imageUrl
         self.isActive = isActive
         self.timeStamp = timeStamp
+        self.order = order
     }
     
     init(data: [String: Any]) {
@@ -33,6 +35,7 @@ struct Category {
         self.imageUrl = data["imageUrl"] as? String ?? ""
         self.isActive = data["isActive"] as? Bool ?? true
         self.timeStamp = data["timeStamps"] as? CVTimeStamp ?? CVTimeStamp()
+        self.order = data["order"] as! Int
     }
     
     static func modelToData(category: Category) -> [String: Any] {
@@ -42,7 +45,8 @@ struct Category {
             "gender": category.gender,
             "imageUrl" : category.imageUrl,
             "isActive" : category.isActive,
-            "timeStamp" : category.timeStamp
+            "timeStamp" : category.timeStamp,
+            "order" : category.order
         ]
         
         return data

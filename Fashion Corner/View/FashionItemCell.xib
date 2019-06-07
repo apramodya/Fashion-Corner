@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FashionItemCell" id="gTV-IL-0wX" customClass="FashionItemCell" customModule="Fashion_Corner" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="181" height="298"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="181" height="298"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTn-t2-sJN">
+                        <rect key="frame" x="0.0" y="0.0" width="181" height="298"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="I49-IF-zvi">
+                                <rect key="frame" x="5" y="4" width="171" height="234"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue long sleeves shirt with special colar" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="BEJ-Ya-MN5">
+                                <rect key="frame" x="6" y="237.5" width="169" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Sky-w2-tiW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FjL-bH-VuZ">
+                                <rect key="frame" x="4" y="271.5" width="173" height="26.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rs. 1350" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Itd-h9-wxi">
+                                        <rect key="frame" x="0.0" y="0.0" width="60.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nwg-b8-ZTq">
+                                        <rect key="frame" x="70.5" y="0.0" width="34.5" height="26.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rs. 1150" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JUU-wF-v6w">
+                                        <rect key="frame" x="116.5" y="0.0" width="56.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="I49-IF-zvi" firstAttribute="top" secondItem="TTn-t2-sJN" secondAttribute="top" constant="4" id="Fhh-RW-0HU"/>
+                            <constraint firstItem="BEJ-Ya-MN5" firstAttribute="leading" secondItem="TTn-t2-sJN" secondAttribute="leading" constant="6" id="L8S-oW-sK7"/>
+                            <constraint firstAttribute="bottom" secondItem="FjL-bH-VuZ" secondAttribute="bottom" id="NGu-sI-5gm"/>
+                            <constraint firstAttribute="trailing" secondItem="BEJ-Ya-MN5" secondAttribute="trailing" constant="6" id="OVE-QU-ciT"/>
+                            <constraint firstItem="FjL-bH-VuZ" firstAttribute="top" secondItem="BEJ-Ya-MN5" secondAttribute="bottom" constant="3" id="P62-CZ-Hrb"/>
+                            <constraint firstItem="FjL-bH-VuZ" firstAttribute="leading" secondItem="TTn-t2-sJN" secondAttribute="leading" constant="4" id="aun-px-xcE"/>
+                            <constraint firstItem="I49-IF-zvi" firstAttribute="leading" secondItem="TTn-t2-sJN" secondAttribute="leading" constant="5" id="jVe-8k-4mM"/>
+                            <constraint firstAttribute="trailing" secondItem="I49-IF-zvi" secondAttribute="trailing" constant="5" id="jb5-r3-k7f"/>
+                            <constraint firstAttribute="bottom" secondItem="I49-IF-zvi" secondAttribute="bottom" constant="60" id="rPC-nq-C8o"/>
+                            <constraint firstAttribute="trailing" secondItem="FjL-bH-VuZ" secondAttribute="trailing" constant="4" id="us9-8w-wJz"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="TTn-t2-sJN" secondAttribute="trailing" id="EFu-rc-dw6"/>
+                <constraint firstAttribute="bottom" secondItem="TTn-t2-sJN" secondAttribute="bottom" id="Z1e-Pl-8fd"/>
+                <constraint firstItem="TTn-t2-sJN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hLj-ZU-9bS"/>
+                <constraint firstItem="TTn-t2-sJN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="nyC-PE-Fbw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="181" height="298"/>
+            <connections>
+                <outlet property="bgView" destination="TTn-t2-sJN" id="gBu-id-wFP"/>
+                <outlet property="discountLbl" destination="Nwg-b8-ZTq" id="9Hp-zk-YGb"/>
+                <outlet property="displayImage" destination="I49-IF-zvi" id="Wb5-RP-pQK"/>
+                <outlet property="displayName" destination="BEJ-Ya-MN5" id="I8Q-hj-YaL"/>
+                <outlet property="finalPriceLbl" destination="JUU-wF-v6w" id="XFw-6M-dwE"/>
+                <outlet property="usualPriceLbl" destination="Itd-h9-wxi" id="AJt-x8-bN5"/>
+            </connections>
+            <point key="canvasLocation" x="48.799999999999997" y="44.977511244377816"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="placeholder" width="480" height="480"/>
+    </resources>
+</document>

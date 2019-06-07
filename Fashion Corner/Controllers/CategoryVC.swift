@@ -17,7 +17,6 @@ class CategoryVC: UIViewController {
     
     var categories = [Category]()
     var db: Firestore!
-    var listner: ListenerRegistration!
     var selectedGender: String = "ladies"
     
     override func viewDidLoad() {
@@ -32,7 +31,7 @@ class CategoryVC: UIViewController {
 
     func getCategories() {
         spinner.startAnimating()
-        db.collection("categories").whereField("gender", isEqualTo: selectedGender).getDocuments { (snap, error) in
+        db.collection("categories").whereField("gender", isEqualTo: selectedGender).order(by: "order").getDocuments { (snap, error) in
             if let error = error {
                 debugPrint(error)
                 return
@@ -82,5 +81,20 @@ extension CategoryVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toItemsCollection", sender: self)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toItemsCollection" {
+            let destinationVC = segue.destination as! ItemsCollectionVC
+
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let category = self.categories[indexPath.row]
+                destinationVC.selectedCategory = category
+            }
+        }
     }
 }
