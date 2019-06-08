@@ -12,6 +12,7 @@ import Firebase
 class HomeVC: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     var homeItems = [HomeItem]()
     var db: Firestore!
@@ -28,8 +29,8 @@ class HomeVC: UIViewController {
     }
     
     func getItems() {
-//        spinner.startAnimating()
-        db.collection("homeItems").getDocuments { (snap, error) in
+        spinner.startAnimating()
+        db.collection("homeItems").order(by: "order").getDocuments { (snap, error) in
             if let error = error {
                 debugPrint(error)
                 return
@@ -41,7 +42,7 @@ class HomeVC: UIViewController {
                 self.homeItems.append(newItem)
             }
             
-//            self.spinner.stopAnimating()
+            self.spinner.stopAnimating()
             self.collectionView.isHidden = false
             self.collectionView.reloadData()
         }

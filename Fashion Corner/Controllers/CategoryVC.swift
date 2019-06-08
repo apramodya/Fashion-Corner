@@ -26,6 +26,10 @@ class CategoryVC: UIViewController {
         tableView.isHidden = true
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        categories.removeAll()
         getCategories()
     }
 
