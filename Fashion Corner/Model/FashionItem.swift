@@ -17,10 +17,11 @@ struct FashionItem {
     var price: Double
     var discountPercentage: Double
     var imageUrl: String
+    var description: String
     var isActive: Bool = true
     var timeStamp: CVTimeStamp
     
-    init(name: String, id: String, category: String, price: Double, discountPercentage: Double, gender: String, imageUrl: String, isActive: Bool = true, timeStamp: CVTimeStamp) {
+    init(name: String, id: String, category: String, price: Double, discountPercentage: Double, gender: String, imageUrl: String, description: String, isActive: Bool = true, timeStamp: CVTimeStamp) {
         self.name = name
         self.id = id
         self.category = category
@@ -28,6 +29,7 @@ struct FashionItem {
         self.discountPercentage = discountPercentage
         self.gender = gender
         self.imageUrl = imageUrl
+        self.description = description
         self.isActive = isActive
         self.timeStamp = timeStamp
     }
@@ -40,6 +42,7 @@ struct FashionItem {
         self.discountPercentage = data["discountPercentage"] as? Double ?? 0.0
         self.gender = data["gender"] as? String ?? "both"
         self.imageUrl = data["imageUrl"] as? String ?? ""
+        self.description = data["description"] as? String ?? ""
         self.isActive = data["isActive"] as? Bool ?? true
         self.timeStamp = data["timeStamps"] as? CVTimeStamp ?? CVTimeStamp()
     }
@@ -53,6 +56,7 @@ struct FashionItem {
             "discountPercentage" : item.discountPercentage,
             "gender": item.gender,
             "imageUrl" : item.imageUrl,
+            "description" : item.description,
             "isActive" : item.isActive,
             "timeStamp" : item.timeStamp
         ]

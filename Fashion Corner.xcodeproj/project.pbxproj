@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		791B282522ABC27300A530A0 /* ItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791B282422ABC27300A530A0 /* ItemVC.swift */; };
+		791B282722ABDC3500A530A0 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791B282622ABDC3500A530A0 /* CustomButton.swift */; };
 		792C7E3822A2D12C006E7DCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792C7E3722A2D12C006E7DCB /* AppDelegate.swift */; };
 		792C7E3A22A2D12C006E7DCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792C7E3922A2D12C006E7DCB /* ViewController.swift */; };
 		792C7E3D22A2D12C006E7DCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 792C7E3B22A2D12C006E7DCB /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 /* Begin PBXFileReference section */
 		3B7813A55ED7356E26D334D6 /* Pods_Fashion_Corner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fashion_Corner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA2E66C026194F97AEE09BC /* Pods-Fashion Corner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fashion Corner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fashion Corner/Pods-Fashion Corner.debug.xcconfig"; sourceTree = "<group>"; };
+		791B282422ABC27300A530A0 /* ItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVC.swift; sourceTree = "<group>"; };
+		791B282622ABDC3500A530A0 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		792C7E3422A2D12C006E7DCB /* Fashion Corner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fashion Corner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		792C7E3722A2D12C006E7DCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		792C7E3922A2D12C006E7DCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 				79842DBF22A40BE900097407 /* HomeVC.swift */,
 				79842DC122A40BF500097407 /* CategoryVC.swift */,
 				79864CDC22AA7DB4005460C4 /* ItemsCollectionVC.swift */,
+				791B282422ABC27300A530A0 /* ItemVC.swift */,
 				79842DC322A40C0000097407 /* SearchVC.swift */,
 				79842DC522A40C0A00097407 /* HelpVC.swift */,
 			);
@@ -148,6 +153,7 @@
 				79864CDE22AA8E0F005460C4 /* FashionItemCell.swift */,
 				79864CDF22AA8E0F005460C4 /* FashionItemCell.xib */,
 				7952950F22AB823A00FCC594 /* HomeCollectionViewCell.swift */,
+				791B282622ABDC3500A530A0 /* CustomButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -329,6 +335,8 @@
 				79864CDD22AA7DB4005460C4 /* ItemsCollectionVC.swift in Sources */,
 				79842DC022A40BE900097407 /* HomeVC.swift in Sources */,
 				79842DC422A40C0000097407 /* SearchVC.swift in Sources */,
+				791B282722ABDC3500A530A0 /* CustomButton.swift in Sources */,
+				791B282522ABC27300A530A0 /* ItemVC.swift in Sources */,
 				792C7E3A22A2D12C006E7DCB /* ViewController.swift in Sources */,
 				7952951022AB823A00FCC594 /* HomeCollectionViewCell.swift in Sources */,
 				79842DCC22A415D800097407 /* CategoryCell.swift in Sources */,

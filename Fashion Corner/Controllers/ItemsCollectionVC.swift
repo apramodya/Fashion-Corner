@@ -76,4 +76,21 @@ extension ItemsCollectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
         
         return CGSize(width: cellWidth, height: cellHeight)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toItem", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toItem" {
+            
+            if let indexPaths = self.collectionView.indexPathsForSelectedItems {
+                let indexPath = indexPaths[0]
+                let item = fashionItems[indexPath.item]
+                let destinationVC = segue.destination as? ItemVC
+                destinationVC?.selectedItem = item
+            }
+        }
+    }
+    
 }
