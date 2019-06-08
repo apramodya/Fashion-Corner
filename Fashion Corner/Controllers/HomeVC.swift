@@ -7,24 +7,68 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeVC: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var homeItems = [HomeItem]()
+    var db: Firestore!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        db = Firestore.firestore()
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.isHidden = true
+        
+        getItems()
     }
     
+    func getItems() {
+//        spinner.startAnimating()
+        db.collection("homeItems").getDocuments { (snap, error) in
+            if let error = error {
+                debugPrint(error)
+                return
+            }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+            for document in snap!.documents {
+                let data = document.data()
+                let newItem = HomeItem(data: data)
+                self.homeItems.append(newItem)
+            }
+            
+//            self.spinner.stopAnimating()
+            self.collectionView.isHidden = false
+            self.collectionView.reloadData()
+        }
+        
     }
-    */
+}
 
+extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return homeItems.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as? HomeCollectionViewCell {
+            cell.configCell(homeItem: homeItems[indexPath.item])
+            return cell
+        }
+        
+        return UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = view.frame.width
+        let cellWidth = (width - 30 )
+        let cellHeight = cellWidth * 1.5
+        
+        return CGSize(width: cellWidth, height: cellHeight)
+    }
+    
 }
