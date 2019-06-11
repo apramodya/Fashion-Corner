@@ -82,12 +82,16 @@
                                         </subviews>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="KNl-1k-Vbf">
-                                        <rect key="frame" x="100" y="360" width="175" height="175"/>
+                                        <rect key="frame" x="100" y="370" width="175" height="175"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="175" id="Tle-U1-sgC"/>
                                             <constraint firstAttribute="width" constant="175" id="WMq-Uv-iAx"/>
                                         </constraints>
                                     </imageView>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="1a2-zC-KAc">
+                                        <rect key="frame" x="169" y="326" width="37" height="37"/>
+                                        <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -95,7 +99,9 @@
                                     <constraint firstItem="KNl-1k-Vbf" firstAttribute="centerX" secondItem="SQN-e3-fK5" secondAttribute="centerX" id="MXO-PH-EY9"/>
                                     <constraint firstItem="zuH-i5-LYx" firstAttribute="leading" secondItem="SQN-e3-fK5" secondAttribute="leading" constant="10" id="ch1-2J-4IJ"/>
                                     <constraint firstAttribute="trailing" secondItem="zuH-i5-LYx" secondAttribute="trailing" constant="10" id="fLh-l8-lwf"/>
-                                    <constraint firstItem="KNl-1k-Vbf" firstAttribute="top" secondItem="zuH-i5-LYx" secondAttribute="bottom" constant="40" id="htK-nD-uH3"/>
+                                    <constraint firstItem="KNl-1k-Vbf" firstAttribute="top" secondItem="zuH-i5-LYx" secondAttribute="bottom" constant="50" id="htK-nD-uH3"/>
+                                    <constraint firstItem="1a2-zC-KAc" firstAttribute="top" secondItem="zuH-i5-LYx" secondAttribute="bottom" constant="6" id="kEb-AV-b9i"/>
+                                    <constraint firstItem="1a2-zC-KAc" firstAttribute="centerX" secondItem="SQN-e3-fK5" secondAttribute="centerX" id="vur-hE-1XV"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -112,6 +118,7 @@
                     <connections>
                         <outlet property="emailTxt" destination="DD1-JJ-HcU" id="F10-MX-tho"/>
                         <outlet property="passwordTxt" destination="rAy-62-nYJ" id="16j-0D-dEE"/>
+                        <outlet property="spinner" destination="1a2-zC-KAc" id="vSC-qy-tXv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEA-jw-73H" userLabel="First Responder" sceneMemberID="firstResponder"/>

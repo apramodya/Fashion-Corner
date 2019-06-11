@@ -181,6 +181,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="loginLogoutBtn" destination="2B4-K9-J7M" id="y6C-jr-vXg"/>
                         <outlet property="segmentedController" destination="Di7-kH-syU" id="ZRG-94-OFZ"/>
                         <outlet property="spinner" destination="PbI-2m-cFa" id="kUb-WP-gYv"/>
                         <outlet property="tableView" destination="MDQ-dj-hXE" id="XoX-DF-JHL"/>
