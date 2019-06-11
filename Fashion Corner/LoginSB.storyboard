@@ -34,13 +34,13 @@
                                                 <rect key="frame" x="0.0" y="40" width="355" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rAy-62-nYJ">
                                                 <rect key="frame" x="0.0" y="80" width="355" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" textContentType="password"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGP-69-dRM">
                                                 <rect key="frame" x="0.0" y="120" width="355" height="30"/>
@@ -67,6 +67,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="registerClicked:" destination="sgi-6s-YtS" eventType="touchUpInside" id="q1A-TJ-fci"/>
+                                                    <segue destination="NA5-cK-1zw" kind="show" id="Mda-UD-nh1"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B08-e0-sUp" customClass="CustomButton" customModule="Fashion_Corner" customModuleProvider="target">
@@ -124,6 +125,91 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEA-jw-73H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="821.60000000000002" y="3.1484257871064472"/>
+        </scene>
+        <!--RegisterVC-->
+        <scene sceneID="dXs-xA-sEX">
+            <objects>
+                <viewController id="NA5-cK-1zw" customClass="RegisterVC" customModule="Fashion_Corner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cTC-qU-dS7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4WG-tj-Qxf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6re-6f-Qhh">
+                                        <rect key="frame" x="10" y="50" width="355" height="230"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7B-y1-cxG">
+                                                <rect key="frame" x="0.0" y="0.0" width="355" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vI4-WE-U7y">
+                                                <rect key="frame" x="0.0" y="50" width="355" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cwF-ax-Ruy">
+                                                <rect key="frame" x="0.0" y="100" width="355" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="new-password"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0a6-BW-yo2">
+                                                <rect key="frame" x="0.0" y="150" width="355" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="new-password"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEj-wd-Em5" customClass="CustomButton" customModule="Fashion_Corner" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="200" width="355" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Register">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="registerClicked:" destination="NA5-cK-1zw" eventType="touchUpInside" id="EKs-sx-sv6"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="cvT-Ch-leo">
+                                        <rect key="frame" x="169" y="305" width="37" height="37"/>
+                                        <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="cvT-Ch-leo" firstAttribute="top" secondItem="6re-6f-Qhh" secondAttribute="bottom" constant="25" id="QY4-av-Ss3"/>
+                                    <constraint firstAttribute="trailing" secondItem="6re-6f-Qhh" secondAttribute="trailing" constant="10" id="dXr-KY-Qbb"/>
+                                    <constraint firstItem="cvT-Ch-leo" firstAttribute="centerX" secondItem="4WG-tj-Qxf" secondAttribute="centerX" id="fzO-yu-tDL"/>
+                                    <constraint firstItem="6re-6f-Qhh" firstAttribute="top" secondItem="4WG-tj-Qxf" secondAttribute="top" constant="50" id="vSu-vj-CtC"/>
+                                    <constraint firstItem="6re-6f-Qhh" firstAttribute="leading" secondItem="4WG-tj-Qxf" secondAttribute="leading" constant="10" id="xy5-v8-9dk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9FK-G5-aur" firstAttribute="bottom" secondItem="4WG-tj-Qxf" secondAttribute="bottom" id="1qh-A8-hkH"/>
+                            <constraint firstItem="9FK-G5-aur" firstAttribute="trailing" secondItem="4WG-tj-Qxf" secondAttribute="trailing" id="ArF-DK-owp"/>
+                            <constraint firstItem="4WG-tj-Qxf" firstAttribute="top" secondItem="9FK-G5-aur" secondAttribute="top" id="nB1-fo-aZJ"/>
+                            <constraint firstItem="4WG-tj-Qxf" firstAttribute="leading" secondItem="9FK-G5-aur" secondAttribute="leading" id="swi-8h-P16"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9FK-G5-aur"/>
+                    </view>
+                    <connections>
+                        <outlet property="confirmPasswordTxt" destination="0a6-BW-yo2" id="nf4-iV-YRN"/>
+                        <outlet property="emailTxt" destination="vI4-WE-U7y" id="MN7-ve-5MH"/>
+                        <outlet property="passwordTxt" destination="cwF-ax-Ruy" id="fMN-dZ-tX6"/>
+                        <outlet property="spinner" destination="cvT-Ch-leo" id="bKi-YF-bpG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dub-nr-Rao" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1677.5999999999999" y="2.2488755622188905"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SZZ-pg-kAo">

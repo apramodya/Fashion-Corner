@@ -20,6 +20,7 @@
 		796CCA2B22AFF39400B22F4E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796CCA2A22AFF39400B22F4E /* UserService.swift */; };
 		796CCA2D22AFF46700B22F4E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796CCA2C22AFF46700B22F4E /* User.swift */; };
 		796CCA2F22AFF7BE00B22F4E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796CCA2E22AFF7BE00B22F4E /* Extensions.swift */; };
+		796CCA3122B001B100B22F4E /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796CCA3022B001B100B22F4E /* RegisterVC.swift */; };
 		79842DC022A40BE900097407 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79842DBF22A40BE900097407 /* HomeVC.swift */; };
 		79842DC222A40BF500097407 /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79842DC122A40BF500097407 /* CategoryVC.swift */; };
 		79842DC422A40C0000097407 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79842DC322A40C0000097407 /* SearchVC.swift */; };
@@ -56,6 +57,7 @@
 		796CCA2A22AFF39400B22F4E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		796CCA2C22AFF46700B22F4E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		796CCA2E22AFF7BE00B22F4E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		796CCA3022B001B100B22F4E /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		79842DBF22A40BE900097407 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		79842DC122A40BF500097407 /* CategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
 		79842DC322A40C0000097407 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				7923AD8022AF5A9700A1341A /* LoginVC.swift */,
+				796CCA3022B001B100B22F4E /* RegisterVC.swift */,
 				79842DBF22A40BE900097407 /* HomeVC.swift */,
 				79842DC122A40BF500097407 /* CategoryVC.swift */,
 				79864CDC22AA7DB4005460C4 /* ItemsCollectionVC.swift */,
@@ -367,6 +370,7 @@
 				7923AD8122AF5A9700A1341A /* LoginVC.swift in Sources */,
 				79842DC422A40C0000097407 /* SearchVC.swift in Sources */,
 				791B282722ABDC3500A530A0 /* CustomButton.swift in Sources */,
+				796CCA3122B001B100B22F4E /* RegisterVC.swift in Sources */,
 				791B282522ABC27300A530A0 /* ItemVC.swift in Sources */,
 				79D887AB22AEB481009363EA /* CheckoutVC.swift in Sources */,
 				792C7E3A22A2D12C006E7DCB /* ViewController.swift in Sources */,

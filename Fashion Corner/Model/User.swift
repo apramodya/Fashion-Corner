@@ -24,4 +24,14 @@ struct User {
         self.email = data["email"] as? String ?? ""
         self.stripeId = data["stripeId"] as? String ?? ""
     }
+    
+    static func modelToData(user: User) -> [String: Any]{
+        let data : [String: Any] = [
+            "id": user.id,
+            "email": user.email,
+            "stripeId" : user.stripeId
+        ]
+        
+        return data
+    }
 }
