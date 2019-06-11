@@ -51,8 +51,8 @@ class CategoryVC: UIViewController {
             self.tableView.isHidden = false
             self.tableView.reloadData()
         }
-
     }
+    
     @IBAction func segmentTapped(_ sender: Any) {
         switch segmentedController.selectedSegmentIndex {
         case 0:
@@ -67,6 +67,17 @@ class CategoryVC: UIViewController {
             print("Error")
         }
     }
+    
+    fileprivate func presentLoginController() {
+        let stroyboard = UIStoryboard(name: "LoginSB", bundle: nil)
+        let controller = stroyboard.instantiateViewController(withIdentifier: "LoginSB")
+        present(controller, animated: true, completion: nil)
+    }
+    
+    @IBAction func loginLogoutClicked(_ sender: Any) {
+        presentLoginController()
+    }
+    
     
 }
 extension CategoryVC: UITableViewDelegate, UITableViewDataSource {

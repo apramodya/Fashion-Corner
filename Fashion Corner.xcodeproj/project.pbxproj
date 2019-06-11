@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		791B282522ABC27300A530A0 /* ItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791B282422ABC27300A530A0 /* ItemVC.swift */; };
 		791B282722ABDC3500A530A0 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791B282622ABDC3500A530A0 /* CustomButton.swift */; };
+		7923AD7F22AF579F00A1341A /* LoginSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7923AD7E22AF579F00A1341A /* LoginSB.storyboard */; };
+		7923AD8122AF5A9700A1341A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7923AD8022AF5A9700A1341A /* LoginVC.swift */; };
 		792C7E3822A2D12C006E7DCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792C7E3722A2D12C006E7DCB /* AppDelegate.swift */; };
 		792C7E3A22A2D12C006E7DCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792C7E3922A2D12C006E7DCB /* ViewController.swift */; };
 		792C7E3D22A2D12C006E7DCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 792C7E3B22A2D12C006E7DCB /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 		6FA2E66C026194F97AEE09BC /* Pods-Fashion Corner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fashion Corner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fashion Corner/Pods-Fashion Corner.debug.xcconfig"; sourceTree = "<group>"; };
 		791B282422ABC27300A530A0 /* ItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVC.swift; sourceTree = "<group>"; };
 		791B282622ABDC3500A530A0 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		7923AD7E22AF579F00A1341A /* LoginSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginSB.storyboard; sourceTree = "<group>"; };
+		7923AD8022AF5A9700A1341A /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		792C7E3422A2D12C006E7DCB /* Fashion Corner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fashion Corner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		792C7E3722A2D12C006E7DCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		792C7E3922A2D12C006E7DCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 				792C7E3722A2D12C006E7DCB /* AppDelegate.swift */,
 				792C7E3922A2D12C006E7DCB /* ViewController.swift */,
 				792C7E3B22A2D12C006E7DCB /* Main.storyboard */,
+				7923AD7E22AF579F00A1341A /* LoginSB.storyboard */,
 				792C7E3E22A2D12E006E7DCB /* Assets.xcassets */,
 				792C7E4322A2D12E006E7DCB /* Info.plist */,
 				79842DCD22A41DF100097407 /* GoogleService-Info.plist */,
@@ -132,6 +137,7 @@
 		79842DBE22A40BBE00097407 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7923AD8022AF5A9700A1341A /* LoginVC.swift */,
 				79842DBF22A40BE900097407 /* HomeVC.swift */,
 				79842DC122A40BF500097407 /* CategoryVC.swift */,
 				79864CDC22AA7DB4005460C4 /* ItemsCollectionVC.swift */,
@@ -245,6 +251,7 @@
 			files = (
 				79842DC922A412B700097407 /* new arrivals.jpg in Resources */,
 				79842DCE22A41DF100097407 /* GoogleService-Info.plist in Resources */,
+				7923AD7F22AF579F00A1341A /* LoginSB.storyboard in Resources */,
 				792C7E3F22A2D12E006E7DCB /* Assets.xcassets in Resources */,
 				792C7E3D22A2D12C006E7DCB /* Main.storyboard in Resources */,
 				79864CE122AA8E0F005460C4 /* FashionItemCell.xib in Resources */,
@@ -340,6 +347,7 @@
 				79842DD422A423AF00097407 /* Firebase+Utils.swift in Sources */,
 				79864CDD22AA7DB4005460C4 /* ItemsCollectionVC.swift in Sources */,
 				79842DC022A40BE900097407 /* HomeVC.swift in Sources */,
+				7923AD8122AF5A9700A1341A /* LoginVC.swift in Sources */,
 				79842DC422A40C0000097407 /* SearchVC.swift in Sources */,
 				791B282722ABDC3500A530A0 /* CustomButton.swift in Sources */,
 				791B282522ABC27300A530A0 /* ItemVC.swift in Sources */,

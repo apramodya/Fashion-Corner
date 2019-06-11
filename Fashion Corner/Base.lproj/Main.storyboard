@@ -169,6 +169,11 @@
                         <viewLayoutGuide key="safeArea" id="CDG-1u-hI0"/>
                     </view>
                     <navigationItem key="navigationItem" title="Categories" id="utK-Vg-oyp">
+                        <barButtonItem key="leftBarButtonItem" title="Login" id="2B4-K9-J7M">
+                            <connections>
+                                <action selector="loginLogoutClicked:" destination="4Gv-v5-hAC" id="5ql-bz-c4i"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="bar_button_cart" id="OI1-1F-aoq">
                             <connections>
                                 <segue destination="4F5-Dc-cqi" kind="show" id="78q-uN-TXr"/>
