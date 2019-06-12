@@ -64,3 +64,9 @@ struct FashionItem {
         return data
     }
 }
+
+extension FashionItem: Equatable {
+    static func ==(lhs: FashionItem, rhs: FashionItem) -> Bool {
+        return lhs.id == rhs.id
+    }
+}

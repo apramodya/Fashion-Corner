@@ -52,5 +52,19 @@ class ItemVC: UIViewController {
             itemImg.kf.setImage(with: url, placeholder: placeholderImage, options: [.transition(.fade(0.2))])
         }
     }
-
+    
+    @IBAction func addToWishlistClicked(_ sender: Any) {
+        print(StripeCart.cartItems.map({$0.name}))
+    }
+    
+    @IBAction func addToCartClicked(_ sender: Any) {
+        if userService.isGuest {
+            self.simpleAlert(title: "Guest Account", message: "Please login to proceed!")
+            return
+        }
+        
+        StripeCart.addItemToCart(item: selectedItem)
+        self.simpleAlert(title: "Item added", message: "Item added to the cart successfully!")
+    }
+    
 }

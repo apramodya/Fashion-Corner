@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CartItemCell: UITableViewCell {
 
@@ -14,17 +15,22 @@ class CartItemCell: UITableViewCell {
     @IBOutlet weak var itemImg: UIImageView!
     @IBOutlet weak var itemLbl: UILabel!
     
+    private var item: FashionItem!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        bgView.layer.cornerRadius = 5
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func configureCell(item: FashionItem) {
+        itemLbl.text = item.name
+        
+        if let url = URL(string: item.imageUrl) {
+            itemImg.kf.setImage(with: url)
+        }
     }
-
+    
     @IBAction func removeItemClicked(_ sender: Any) {
     }
 }

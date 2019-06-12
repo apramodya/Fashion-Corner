@@ -15,12 +15,36 @@ extension String {
     }
 }
 
+extension Int {
+    func centsToFormattedCurrency() -> String {
+        let unit = Double(self) / 100
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = Locale(identifier: "si_LK")
+        
+        if let unitString = formatter.string(from: unit as NSNumber) {
+            return unitString
+        }
+        
+        return formatter.string(from: 0 as NSNumber)!
+    }
+}
+
+
 extension UIViewController {
     
     func simpleAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
+    }
+}
+
+extension UITableViewCell {
+    override open func layoutSubviews() {
+        super.layoutSubviews()
+        
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 1, left: 0, bottom: 5, right: 0))
     }
 }
 

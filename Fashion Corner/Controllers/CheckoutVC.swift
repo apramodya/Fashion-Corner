@@ -22,14 +22,44 @@ class CheckoutVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        setupPaymentInfo()
     }
 
+    private func setupPaymentInfo() {
+        subtotalLbl.text = StripeCart.subTotal.centsToFormattedCurrency()
+        processingFeeLbl.text = StripeCart.processingFee.centsToFormattedCurrency()
+        shippingCostLbl.text = StripeCart.shippingFee.centsToFormattedCurrency()
+        totalLbl.text = StripeCart.total.centsToFormattedCurrency()
+    }
+    
     @IBAction func paymentMethodClicked(_ sender: Any) {
     }
     @IBAction func shippingMethodClicked(_ sender: Any) {
     }
     @IBAction func placeOrderClicked(_ sender: Any) {
     }
+}
+
+extension CheckoutVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return StripeCart.cartItems.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "CartItemCell", for: indexPath) as? CartItemCell {
+            let item = StripeCart.cartItems[indexPath.row]
+            cell.configureCell(item: item)
+            return cell
+        }
+        
+        return UITableViewCell()
+    }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+
 }
