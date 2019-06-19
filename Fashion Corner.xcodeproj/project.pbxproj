@@ -18,6 +18,7 @@
 		7946657C22B0ABC900D2A71D /* StripeCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7946657B22B0ABC900D2A71D /* StripeCart.swift */; };
 		7952951022AB823A00FCC594 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952950F22AB823A00FCC594 /* HomeCollectionViewCell.swift */; };
 		7952951222AB88A500FCC594 /* HomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952951122AB88A500FCC594 /* HomeItem.swift */; };
+		795575E222B89B1900F8EFA4 /* StripeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795575E122B89B1900F8EFA4 /* StripeApi.swift */; };
 		796CCA2B22AFF39400B22F4E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796CCA2A22AFF39400B22F4E /* UserService.swift */; };
 		796CCA2D22AFF46700B22F4E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796CCA2C22AFF46700B22F4E /* User.swift */; };
 		796CCA2F22AFF7BE00B22F4E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796CCA2E22AFF7BE00B22F4E /* Extensions.swift */; };
@@ -30,7 +31,6 @@
 		79842DCC22A415D800097407 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79842DCB22A415D800097407 /* CategoryCell.swift */; };
 		79842DCE22A41DF100097407 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79842DCD22A41DF100097407 /* GoogleService-Info.plist */; };
 		79842DD122A41F1D00097407 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79842DD022A41F1D00097407 /* Category.swift */; };
-		79842DD422A423AF00097407 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79842DD322A423AF00097407 /* Firebase+Utils.swift */; };
 		79864CDD22AA7DB4005460C4 /* ItemsCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79864CDC22AA7DB4005460C4 /* ItemsCollectionVC.swift */; };
 		79864CE022AA8E0F005460C4 /* FashionItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79864CDE22AA8E0F005460C4 /* FashionItemCell.swift */; };
 		79864CE122AA8E0F005460C4 /* FashionItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79864CDF22AA8E0F005460C4 /* FashionItemCell.xib */; };
@@ -56,6 +56,7 @@
 		7946657B22B0ABC900D2A71D /* StripeCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeCart.swift; sourceTree = "<group>"; };
 		7952950F22AB823A00FCC594 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		7952951122AB88A500FCC594 /* HomeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItem.swift; sourceTree = "<group>"; };
+		795575E122B89B1900F8EFA4 /* StripeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeApi.swift; sourceTree = "<group>"; };
 		796CCA2A22AFF39400B22F4E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		796CCA2C22AFF46700B22F4E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		796CCA2E22AFF7BE00B22F4E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -68,7 +69,6 @@
 		79842DCB22A415D800097407 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		79842DCD22A41DF100097407 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		79842DD022A41F1D00097407 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		79842DD322A423AF00097407 /* Firebase+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Utils.swift"; sourceTree = "<group>"; };
 		79864CDC22AA7DB4005460C4 /* ItemsCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCollectionVC.swift; sourceTree = "<group>"; };
 		79864CDE22AA8E0F005460C4 /* FashionItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FashionItemCell.swift; sourceTree = "<group>"; };
 		79864CDF22AA8E0F005460C4 /* FashionItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FashionItemCell.xib; sourceTree = "<group>"; };
@@ -129,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				796CCA2922AFF37200B22F4E /* Services */,
-				79842DD222A4239F00097407 /* Utils */,
 				79842DCF22A41F0F00097407 /* Model */,
 				79842DCA22A415B500097407 /* View */,
 				79842DC722A4127000097407 /* Images */,
@@ -151,6 +150,7 @@
 				796CCA2A22AFF39400B22F4E /* UserService.swift */,
 				796CCA2E22AFF7BE00B22F4E /* Extensions.swift */,
 				7946657B22B0ABC900D2A71D /* StripeCart.swift */,
+				795575E122B89B1900F8EFA4 /* StripeApi.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -201,14 +201,6 @@
 				796CCA2C22AFF46700B22F4E /* User.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		79842DD222A4239F00097407 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				79842DD322A423AF00097407 /* Firebase+Utils.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,10 +359,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79842DD422A423AF00097407 /* Firebase+Utils.swift in Sources */,
 				79864CDD22AA7DB4005460C4 /* ItemsCollectionVC.swift in Sources */,
 				79842DC022A40BE900097407 /* HomeVC.swift in Sources */,
 				7923AD8122AF5A9700A1341A /* LoginVC.swift in Sources */,
+				795575E222B89B1900F8EFA4 /* StripeApi.swift in Sources */,
 				79842DC422A40C0000097407 /* SearchVC.swift in Sources */,
 				791B282722ABDC3500A530A0 /* CustomButton.swift in Sources */,
 				796CCA3122B001B100B22F4E /* RegisterVC.swift in Sources */,

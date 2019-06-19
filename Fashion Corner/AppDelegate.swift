@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Stripe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
+        STPPaymentConfiguration.shared().publishableKey = "pk_test_iwssSN0aR8jD9EdCp80Tmw2500gY91wcUL"
         
         return true
     }
